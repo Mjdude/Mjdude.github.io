@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Prashanth A</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #bf00ff;
+            text-align: center;
+            text-shadow: 0 0 10px #bf00ff,
+                        0 0 20px #bf00ff,
+                        0 0 30px #bf00ff;
+            margin-bottom: 3rem;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #bf00ff;
+            margin: 3rem 0 2rem;
+            text-shadow: 0 0 5px #bf00ff;
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: slideIn 0.8s ease forwards;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            position: relative;
+            background: rgba(191, 0, 255, 0.1);
+            border: 2px solid #bf00ff;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            height: 400px;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px #bf00ff;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px rgba(191, 0, 255, 0.5);
+        }
+
+        .project-desc {
+            font-size: 0.9rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(191, 0, 255, 0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #bf00ff;
+            border: 1px solid #bf00ff;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(191, 0, 255, 0.2);
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #bf00ff;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            background: rgba(191, 0, 255, 0.3);
+            box-shadow: 0 0 15px #bf00ff;
+            transform: translateY(-3px);
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #bf00ff,
+                            0 0 20px #bf00ff;
+            }
+            to {
+                text-shadow: 0 0 15px #bf00ff,
+                            0 0 25px #bf00ff,
+                            0 0 30px #bf00ff;
+            }
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .project-card {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Projects</h1>
+
+        <h2 class="section-title">AI & DevOps Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Digital-identity.jpeg" alt="Digital Identity">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">AI-Generated Digital Identity</h3>
+                    <p class="project-desc">Uses GenAI and Blockchain to verify work history and skills of informal workers, helping them access financial and government services.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">GenAI</span>
+                        <span class="tech-tag">Blockchain</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="Layoff-tracker-visual.png" alt="Layoff Tracker">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">AI-Based Layoff Tracking</h3>
+                    <p class="project-desc">Tracks real-time layoffs and recommends jobs based on skills, experience, and industry trends.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">AI</span>
+                        <span class="tech-tag">Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="farm.jpeg" alt="Farming Chatbot">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">AI-Chatbot for Farming</h3>
+                    <p class="project-desc">Provides optimal farming techniques and generates downloadable PDFs for farmers.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">IoT & Embedded Systems</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="watch.jpeg" alt="Smart Watch">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Smart Watch for Elderly</h3>
+                    <p class="project-desc">Arduino-based device that monitors health parameters, detects falls, and provides emergency alerts. Ranked top 50 out of 300 teams.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Healthcare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>

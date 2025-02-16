@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Prashanth A</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #bf00ff;
+            text-shadow: 0 0 10px #bf00ff, 0 0 20px #bf00ff;
+            margin-bottom: 1rem;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ccc;
+        }
+
+        .contact-form {
+            background: rgba(191, 0, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid #bf00ff;
+            box-shadow: 0 0 15px rgba(191, 0, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+            background: #222;
+            color: #e0e0e0;
+            outline: none;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .submit-button {
+            padding: 0.8rem 2rem;
+            background: #bf00ff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #9200cc;
+            box-shadow: 0 0 15px #bf00ff;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: rgba(191, 0, 255, 0.2);
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #bf00ff;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(191, 0, 255, 0.3);
+            box-shadow: 0 0 15px #bf00ff;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #bf00ff, 0 0 20px #bf00ff;
+            }
+            to {
+                text-shadow: 0 0 15px #bf00ff, 0 0 25px #bf00ff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Me</h1>
+        <p>Got a project, idea, or just want to say hi? Fill out the form below and I'll get back to you ASAP!</p>
+        
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+</body>
+</html>

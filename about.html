@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Prashanth A</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            background-image: url('2.jpg'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(1.2) contrast(1);
+            z-index: -2;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #bf00ff;
+            text-align: center;
+            text-shadow: 0 0 10px #bf00ff,
+                        0 0 20px #bf00ff,
+                        0 0 30px #bf00ff;
+            margin-bottom: 2rem;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        .section {
+            background: rgba(191, 0, 255, 0.1);
+            border: 2px solid #bf00ff;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            color: #bf00ff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px #bf00ff;
+        }
+
+        .highlight {
+            color: #bf00ff;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(191, 0, 255, 0.5);
+        }
+
+        .role-card {
+            background: rgba(191, 0, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .role-card:hover {
+            transform: translateX(10px);
+            background: rgba(191, 0, 255, 0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            background: rgba(191, 0, 255, 0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: rgba(191, 0, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: rgba(191, 0, 255, 0.2);
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid #bf00ff;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .back-button:hover {
+            background: rgba(191, 0, 255, 0.3);
+            box-shadow: 0 0 15px #bf00ff;
+            transform: translateY(-3px);
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #bf00ff,
+                            0 0 20px #bf00ff;
+            }
+            to {
+                text-shadow: 0 0 15px #bf00ff,
+                            0 0 25px #bf00ff,
+                            0 0 30px #bf00ff;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Me</h1>
+
+        <div class="section">
+            <h2 class="section-title">Introduction</h2>
+            <p>I'm <span class="highlight">Prashanth A</span>, a passionate <span class="highlight">DevOps Engineer</span> and <span class="highlight">AI Enthusiast</span> shaping the future of technology integration and automation.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="role-card">
+                <h3>B.Tech in Computer Science & Engineering (CST)</h3>
+                <p>Specialization in DevOps</p>
+                <p>Presidency University, Bengaluru</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Leadership</h2>
+            <div class="role-card">
+                <h3>Head of Media</h3>
+                <p>GoOps Club</p>
+                <p>Combining technical expertise with creative storytelling to drive innovation and engagement.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Cloud Computing</div>
+                <div class="skill-item">Automation</div>
+                <div class="skill-item">AI Integration</div>
+                <div class="skill-item">DevOps</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Notable Projects</h2>
+            <div class="role-card">
+                <h3>AI Digital Identity Verification</h3>
+                <p>Bridging technology and real-world impact through innovative solutions.</p>
+            </div>
+            <div class="role-card">
+                <h3>AI-Based Layoff Tracking</h3>
+                <p>Developing intelligent job recommendation systems to support career transitions.</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
